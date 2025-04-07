@@ -196,3 +196,24 @@
 
 // }
 // console.log(longestName)
+
+
+function arrayStats(arr){
+    let maxElement = Math.max(...arr);
+    let minElement = Math.min(...arr);
+    let count = arr.lenght;
+    let sum = arr.reduce((acc,curr) => acc + curr, 0);
+    let average = sum / count;
+
+    return {
+        max: maxElement,
+        min : minElement,
+        count : count,
+        sum : sum,
+        average : average
+    };
+}
+
+let arr = [24, 47, 12, 105, 200, 604, 80, 95, 102, 5, 790];
+let stats = arrayStats(arr);
+console.log(stats)
